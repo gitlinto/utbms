@@ -88,7 +88,7 @@ if uploaded_file:
 
 llm_groq = ChatGroq(
     model_name="deepseek-r1-distill-llama-70b",  # Specify the model name
-    api_key=api_key,        # Provide your API key from user data
+    api_key=st.secrets["GROQ_API_KEY"],        # Provide your API key from user data
     temperature=0.7                              # Set the temperature for response randomness
 )
 ai_mesg = llm_groq.invoke("how Kafka works")
