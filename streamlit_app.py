@@ -4,6 +4,9 @@ import numpy as np
 from PyPDF2 import PdfReader
 from io import StringIO
 from datetime import date  # Import for today's date
+from langchain_groq import ChatGroq
+
+api_key = st.secrets["GROQ_API_KEY"]
 
 st.title("🎈Jinginakadi")
 st.write(
@@ -82,3 +85,11 @@ if uploaded_file:
             # Show the first 4 lines
             pdf_lines = pdf_text.split("\n")[:4]
             st.write("\n".join(pdf_lines))
+
+llm_groq = ChatGroq(
+    model_name="deepseek-r1-distill-llama-70b",  # Specify the model name
+    api_key=api_key,        # Provide your API key from user data
+    temperature=0.7                              # Set the temperature for response randomness
+)
+ai_mesg = llm_groq.invoke("how Kafka works")
+st.write(ai_mesg.content)
