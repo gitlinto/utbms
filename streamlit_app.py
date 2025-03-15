@@ -13,7 +13,7 @@ with st.sidebar:
     st.markdown("""
     # 🔹 Description
 
-    This tool is useful for businesses, and individuals** who want to refine analysis.
+    This tool is useful for businesses, and individuals** who want to ease reviews.
 
     ### 🚀 How It Works
     1 ** Upload file.  
