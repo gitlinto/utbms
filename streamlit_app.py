@@ -17,8 +17,8 @@ with st.sidebar:
 
     ### 🚀 How It Works
     1 ** Upload file.  
-    2 ** AI Enhances   
-    3 ** Download 
+    2 ** Automated Workflow   
+    3 ** Download file
 
     ### 🔹 Key Features
     ---
